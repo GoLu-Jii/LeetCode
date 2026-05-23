@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
+
+        int st = 0, ed = arr.size()-1;
+        int mid = st + (ed - st)/2;
+
+        while (st < ed){
+
+            if(arr[mid] < arr[mid + 1]){
+                st = mid + 1;
+            }
+            else{
+                ed = mid;
+            }
+            mid = st + (ed - st)/2;
+
+        }
+
+        return st;
+    }
+
+};
