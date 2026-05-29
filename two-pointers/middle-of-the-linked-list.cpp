@@ -17,10 +17,10 @@ public:
             temp = temp->next;
             count++;
         }
+        temp = head;
         for(int i = 0; i < count/2; i++){
-            head = head->next;
+            temp = temp->next;
         }
-        head = head->next;
-        return head;
+        return temp;
     }
 };
