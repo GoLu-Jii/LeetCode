@@ -11,8 +11,8 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode* temp = head;
         bool foundcycle = false;
-        while(temp-> next-> val != NULL){
-            if(temp-> next-> val == INT_MAX){
+        while(temp){
+            if(temp-> val == INT_MAX){
                 foundcycle = true;
                 break;
             }
