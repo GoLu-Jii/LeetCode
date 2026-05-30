@@ -23,7 +23,7 @@ public:
         for (auto item : lists) {
             while (item) {
                 pq.push(item);
-                item = item->next;   // missing
+                item = item->next;  
             }
         }
 
@@ -38,7 +38,7 @@ public:
             temp = temp->next;
         }
 
-        temp->next = nullptr;  // good practice
+        temp->next = nullptr;  
 
         return head->next;
     }
